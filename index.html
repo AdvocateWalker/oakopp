@@ -60,7 +60,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand to-top" rel="home" href="https://www.oakgov.com/parks/Pages/jobs.aspx">
+            <a class="navbar-brand to-top" rel="home" href="">
                <img src="img\assets\Picture16.png" alt="Oakland Opportunities" class="logo-big">
                <img src="img\assets\Modifiedoakland.png" alt="Oakland Opportunities" class="logo-small">
             </a>
@@ -74,11 +74,11 @@
                      home
                   </a>
                </li>
-               <!-- <li class="to-section">
-                  <a href="#about">
-                     About Us
+               <li class="to-section">
+                  <a href="https://www.oakgov.com/parks/Pages/jobs.aspx">
+                     Oakland
                   </a>
-               </li> -->
+               </li>
                <!-- <li class="to-section">
                   <a href="#team">
                      Team
@@ -90,7 +90,7 @@
                   </a>
                </li> -->
                <li class="to-section">
-                  <a href="#contact">
+                  <a href="#call-to-action-1">
                      Contact
                   </a>
                </li>
@@ -222,7 +222,7 @@
                                         style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
                      <div class="op-2">
                         <a href="#call-to-action-1" class="btn btn-primary btn-scroll">
-                           take our survey
+                           Fill out our form
                         </a>
                      </div>
                   </div>
@@ -276,8 +276,8 @@
                                         data-endspeed="300"
                                         style="z-index: 4; max-width: auto; max-height: auto; white-space:normal;">
                      <div class="op-3">
-                        <a href="#contact" class="btn btn-primary btn-scroll">
-                           Contact Us
+                        <a href="#map" class="btn btn-primary btn-scroll">
+                           Location
                         </a>
                      </div>
                   </div>
@@ -977,7 +977,7 @@
                </div>
                <div class="feature-info">
                   <h4>indoor Yard Games</h4>
-                  <p class="feature-description">Cornhole, Giant Chess, spike ball</p>
+                  <p class="feature-description">Cornhole, Giant Chess, Spike Ball</p>
                </div>
             </div>
             <div class="col-md-4 col-sm-12 white feature-column">
@@ -986,7 +986,8 @@
                </div>
                <div class="feature-info">
                   <h4>Job Interviews</h4>
-                  <p class="feature-description">OCP is looking for people to hire.</p>
+                  <p class="feature-description">We've set up a station for anyone to come interview for a job at OCP, or ask questions.</p>
+                  
                </div>
             </div>
             <div class="col-md-4 col-sm-12 white feature-column">
@@ -995,7 +996,7 @@
                </div>
                <div class="feature-info">
                   <h4>RC Cars</h4>
-                  <p class="feature-description">RC cars will be inside.</p>
+                  <p class="feature-description">RC cars will be provided</p>
                </div>
             </div>
          </div>
@@ -1304,7 +1305,22 @@
    <!-- End Contact Form Section -->
    
    <!-- Start Google Map Section -->
-   <!-- <div id="map"></div> -->
+   <div id="map"></div>
+   <script>
+      $('.map')
+        .gmap3({
+          center:[48.8620722, 2.352047],
+          zoom:4
+        })
+        .marker([
+          {position:[48.8620722, 2.352047]},
+          {address:"86000 Poitiers, France"},
+          {address:"66000 Perpignan, France", icon: "https://maps.google.com/mapfiles/marker_grey.png"}
+        ])
+        .on('click', function (marker) {
+          marker.setIcon('https://maps.google.com/mapfiles/marker_green.png');
+        });
+    </script>
    <!-- End Google Map Section -->
    
    <!-- Start Footer 1 -->
